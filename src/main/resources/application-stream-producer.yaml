@@ -1,0 +1,31 @@
+spring:
+  cloud:
+    stream:
+      #自此处配置要绑定的rabbitmq的服务信息
+      binders:
+        #表示定义的名称，用于binding整合
+        defaultRabbit:
+          #消息组件类型
+          type: rabbit
+          #设置rabbitmq相关的环境配置
+          environment:
+            spring:
+              rabbitmq:
+                host: localhost
+                port: 5672
+                username: guest
+                password: guest
+      #服务的整合处理
+      bindings:
+        #消息推送通道(stream 3.2之后的推荐写法)
+        myChannel-out-0:
+          #表示要使用的exchange名称定义（相当于topic)
+          destination: studyExchange
+          #设置消息类型，本次为json
+          content-type: application/json
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+eureka:
+  instance:
+    #显示当前模块的名称
+    instance-id: ${spring.application.name}
+    #true：显示当前模块的ip地址
+    prefer-ip-address: true
+    #Eureka服务端在收到最后一次心跳后等待时间上限，单位为秒(默认是90秒)，超时将剔除服务
+    lease-expiration-duration-in-seconds: 60
+    health-check-url-path: ${spring.application.name}/monitor/health
+    status-page-url-path: ${spring.application.name}/monitor/info
+  client:
+    #不向eureka服务注册自己
+    register-with-eureka: false
+    #不向Eureka检索服务
+    fetch-registry: false
+    #enabled: false
+    service-url:
+      #集群注册中心，写多个eureka地址，逗号分割
+      defaultZone: http://localhost:9990/eureka/
+      #,http://localhost:8880/eureka/,http://localhost:7770/eureka/
+  server:
+    #false 禁用自我保护机制，true(默认)开启自我保护
+    enable-self-preservation: true
+    eviction-interval-timer-in-ms: 30000
+
+
+
+
