@@ -12,6 +12,7 @@
     </parent>
 
     <artifactId>bq-boot-root</artifactId>
+    <version>1.0.4</version>
     <name>bq-boot-root</name>
     <description>easy use web or webflux for springboot project</description>
     <url>https://github.com/woollay/bq-boot-root</url>
@@ -26,7 +27,7 @@
         <dependency>
             <groupId>com.biuqu</groupId>
             <artifactId>bq-base</artifactId>
-            <version>${bq.version}</version>
+            <version>1.0.4</version>
         </dependency>
         <dependency>
             <groupId>com.biuqu</groupId>

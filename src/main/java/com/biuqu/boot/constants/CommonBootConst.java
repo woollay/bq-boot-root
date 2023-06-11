@@ -14,6 +14,16 @@ public final class CommonBootConst
     public static final String HTTP_PARAMS = "httpParams";
 
     /**
+     * Json规则参数
+     */
+    public static final String JSON_RULES = "jsonRules";
+
+    /**
+     * Json忽略参数
+     */
+    public static final String JSON_IGNORES = "jsonIgnores";
+
+    /**
      * jwtChannel配置
      */
     public static final String JWT_CHANNEL_CONFIG = "jwtChannel";
